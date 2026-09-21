@@ -40,15 +40,21 @@ public:
         if(isEmpty()){
             return -1;
         }
-       return q[(rear-1+capacity)%capacity];
+       return q[(rear-1+capacity)% capacity];
     }
     
     bool isEmpty() {
-        return size == 0;
+        if (size == 0) {
+        return true;
+    }
+    return false;
     }
     
     bool isFull() {
-        return size==capacity;
+        if(size==capacity){
+            return true;
+        }
+        return false;
     }
 };
 
